@@ -1,0 +1,272 @@
+header{
+    margin:0;
+
+    
+    
+}
+
+nav{
+    padding:0px 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin:0;
+    background-color: rgb(228, 100, 126);
+}
+
+nav, ul{
+    display:flex;
+    flex-direction: row;
+    
+
+}
+
+header button{
+    background: transparent;
+    border:none;
+    color:pink;
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display:none
+}
+
+.logo{
+    color:black;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    overflow:hidden;
+    transition: 0.5s;
+}
+
+ul li{
+    padding: 10px 20px;
+}
+
+ul li:hover,
+header button:hover{
+    cursor: pointer;
+    background-color:pink;
+    transition: 0.5s;
+}
+
+header button:focus ~ ul{
+    height: 200px;
+}
+
+li a{
+    padding:10px 15px;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+}
+
+h3 a{
+    text-decoration: none;
+    color: black;
+
+}
+
+@media (max-width:870px) {
+    nav, ul{
+        flex-direction: column;
+        align-items: unset;
+    }
+    
+
+    ul{
+        text-align: center;
+        height:0
+    }
+
+    nav{
+        padding-top: 10px;
+    }
+
+    header button{
+        display: flex;
+    }
+}
+
+/*Corpo da Página*/
+
+body{
+    background-image: url("../Imagens/fundo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:auto;
+    height:auto;
+    min-width: 200px;
+    max-width: 2000px;
+}
+
+.item{
+    padding:20px;
+    margin:10px;
+    max-width: 25%;
+    height: auto;
+    text-align: center;
+    background-color: rgba(220, 20, 177, 0.39);
+
+}
+
+.item img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+h1{
+    text-align: center;
+    font-size:30pt;
+}
+
+p{
+    font-size: 25pt;
+    background-color: white;
+    margin: 10px;
+}
+
+.agendar{
+    background-color: pink;
+    padding: 15px;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 5px 5px 2px purple;
+    margin:10px;
+    width: 40%;
+
+}
+
+.agendar:hover{
+    cursor: pointer;
+    background-color: white;
+    color: crimson;
+    transition: .5s;
+}
+
+.agendar:active{
+    color:blue;
+    background-color: plum;
+    transition: 1s;
+
+}
+
+#active{
+    background-color: pink;
+    padding: 15px;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 5px 5px 2px purple;
+    margin:10px;
+
+}
+
+#active:hover{
+    cursor: pointer;
+    background-color: white;
+    color: crimson;
+}
+
+#active:active{
+    color:blue;
+    background-color: plum;
+
+}
+
+.container-popup{
+    position:fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.container-popup.active{
+    display: flex;
+   
+}
+
+.popup{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px,2px,5px pink;
+    padding:0;
+    width: 50%;
+    height: auto;
+}
+
+.popup img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+.popup button{
+    background-color: pink;
+    padding: 15px;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 5px 5px 2px purple;
+    margin:10px;
+    width: 80%;
+}
+
+.popup button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: crimson;
+}
+
+.popup button:active{
+    color:blue;
+    background-color: plum;
+
+}
+
+@media (max-width:870px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+
+    }
+
+    .item{
+        max-width: 60%;
+        height: auto;
+    }
+    .popup{
+        width: 100%;
+        height: auto;
+    }
+}
